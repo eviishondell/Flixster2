@@ -37,15 +37,16 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
 
         private val ivPoster = itemView.findViewById<ImageView>(R.id.ivPoster)
         private val tvTitle = itemView.findViewById<TextView>(R.id.tvTitle)
-        private val tvOverview = itemView.findViewById<TextView>(R.id.tvOverview)
+//        private val tvOverview = itemView.findViewById<TextView>(R.id.tvOverview)
 
         init {
             itemView.setOnClickListener(this)
         }
 
+
         fun bind(movie: Movie) {
             tvTitle.text = movie.title
-            tvOverview.text = movie.overview
+//            tvOverview.text = movie.overview
             Glide.with(context).load(movie.posterImageUrl).into(ivPoster)
 
         }
